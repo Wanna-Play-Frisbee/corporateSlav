@@ -1,2 +1,2 @@
 # corporateSlav
-fuccening slav shit
+for filthy gopnik
