@@ -1,15 +1,18 @@
-public class balance{
-	constant int Balance(int startingBal){
-		Balance = startingBal;
+public balance{
+	function Balance(int startingBal){
+		var Balance = new Object(startingBal);
 	}
-	void buy(int shopNum){
+	function buy(int shopNum){
 		if (Balance>=shop.getValue(shopNum)){
 			Balance-=shop.getValue(shopNum);
 		}else{
-			alert("Hoe ass hoe you can't afford that.");		
+			alert("Hoe ass hoe you can't afford that.");
 		}
 	}
-	void gains(int addBal){
-		Balance+=addBal;	
+	function gains(int addBal){
+		Balance+=addBal;
+	}
+	function value(){
+		return Balance;
 	}
 }
