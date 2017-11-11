@@ -1,0 +1,4 @@
+750	Adidas Counterfeiter
+1500	Gopnik Recreation Center
+5000	Levis Franchise
+END
