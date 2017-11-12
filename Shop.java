@@ -2,42 +2,48 @@ package tycoon;
 import java.util.*;
 
 public class Shop {
-	String fileName;
 	Scanner readyBoi;
-	ArrayList shopStock = new ArrayList();
-	public static Shop lastShop;
+	ArrayList<Item> shopStock = new ArrayList<Item>();
 	
 	public Shop(String stock){
-		this.readyBoi = new Scanner(this.fileName);
-		if(readyBoi.hasNextLine()){
+		this.readyBoi = new Scanner(stock);
+		while(readyBoi.hasNextLine()){
 			String temp = readyBoi.nextLine();
-			Object tempArray[] = temp.split("\t",2);
-			tempArray[0] = Integer.parseInt((String)tempArray[0]);
-			this.shopStock.add(tempArray);
+			Tycoon.out(temp);
+			String tempArray[] = temp.split("\t", 5);
+			Item i = new Item(
+				Integer.parseInt(tempArray[0]),
+				Integer.parseInt(tempArray[1]),
+				Integer.parseInt(tempArray[2]),
+				tempArray[3],
+				tempArray[4]
+			);
+			this.shopStock.add(i);
 		}
-		Shop.lastShop = this;
 	}
-	
-	public int getValue(int itemNum){
-		return (int)(((Object[])(shopStock.get(itemNum)))[0]);
-	}
-	
-	public String getItem(int itemNum){
-		return (String)(((Object[])(shopStock.get(itemNum)))[1]);
-	}
-	
-	public String buy(Player p, int itemNum, int amt){
-		String response;
-		if(p.balance >= (lastShop.getValue(itemNum)) * amt) {
-			p.balance-= (lastShop.getValue(itemNum)) * amt;
-			for(int i=1; i<=amt; i++){
-				p.invAdd(lastShop.getItem(itemNum));
+	public Item getItemById(int id){
+		for(Item i : shopStock){
+			if(i.id==id){
+				return i;
 			}
-			response = ("Successfully bought "+amt+" "+(lastShop.getItem(itemNum)));
-		} else {
-			response = "Sorry, but you can't afford that.";
 		}
-		return response;
+		return null;
+	}
+	
+	public void buy(Player p, int id, int amt){
+		try {
+			Item i = getItemById(id);
+				if(p.balance >= i.price * amt){
+					for(int j=0; j<amt; j++){
+						p.invAdd(i.clone());
+					}
+					p.balance -= i.price * amt;
+				} else {
+					Tycoon.out("You do not have enough money!");
+				}
+		} catch (java.lang.NullPointerException e) {
+			Tycoon.out("There are no more of that item!");
+		}
 	}
 	
 }
