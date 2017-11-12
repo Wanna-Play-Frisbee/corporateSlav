@@ -1,5 +1,4 @@
 import java.awt.EventQueue;
-
 import javax.swing.JFrame;
 import javax.swing.JScrollBar;
 import java.awt.BorderLayout;
@@ -78,7 +77,7 @@ public class JGUI {
 		btnSquat.addMouseListener(new MouseAdapter() {
 			public void mouseClicked(MouseEvent arg0, Tycoon t) {
 				//GIVE EM DAT SWEET SWEET SQUAT $$$
-				Tycoon.you.balance+=Tycoon.you.squatConstant;
+				Tycoon.you.balance+=(Tycoon.you.squatConstant*Tycoon.you.squatSquad);
 				lblCorporateSlavPrealpha.setText("Corporate Slav Pre-Alpha, Bal: "+Tycoon.you.balance);
 			}
 		});
