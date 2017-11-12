@@ -66,7 +66,9 @@ public class JGUI {
 		textField.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				textPane.setText(textField.getText() + "\n");
-				//SEND THE COMMANDY BOIZ AND CLEAR FIELDO	
+				//SEND THE COMMANDY BOIZ AND CLEAR FIELDO
+				Tycoon.command(textField.getText());
+				textField.setText("");
 			}
 		});
 		frame.getContentPane().add(textField, BorderLayout.SOUTH);
@@ -74,10 +76,9 @@ public class JGUI {
 		
 		JButton btnSquat = new JButton("Squat");
 		btnSquat.addMouseListener(new MouseAdapter() {
-			@Override
-			public void mouseClicked(MouseEvent arg0) {
+			public void mouseClicked(MouseEvent arg0, Tycoon t) {
 				//GIVE EM DAT SWEET SWEET SQUAT $$$
-				
+				Tycoon.you.balance+=Tycoon.you.squatConstant;
 				lblCorporateSlavPrealpha.setText("Corporate Slav Pre-Alpha, Bal: "+Tycoon.you.balance);
 			}
 		});

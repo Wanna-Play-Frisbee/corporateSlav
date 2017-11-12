@@ -15,5 +15,8 @@ public class Tycoon {
 	public static void out(String s) {
 		System.out.println(s);
 	}
+	public static void command(String s) {
+		String command[] = s.split(",/ /");
+	}
 
 }
