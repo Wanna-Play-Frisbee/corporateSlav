@@ -1,6 +1,6 @@
 1500	Gopnik Recreation Center    A place for your average street urchin to squat 10
 2500    Squatter's Safespace    A posh place for the more distinguished squatters   20
-7500	Adidas Tracksuit Counterfeiter  You couldn't afford real ones anyway... 50
+7500	Abibas Tracksuit Counterfeiter  You couldn't afford real ones anyway... 50
 15000	Levis Franchise They just aren't what they used to be   100
 25000   Rigal's Coffee Emporium Best coffee east of the Iron Curtain. It teaches you physics, too   250
 30000   Hard Bass Studio    Slavs must recieve at least 12 hard bass a day to stay alive    300
