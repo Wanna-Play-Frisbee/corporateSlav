@@ -15,10 +15,10 @@ public class Shop {
 		this.filename = stock;
 		filereader = new File("./shop.csv");
 		try {
-			reader = new Scanner(filereader, "UTF-8");
+			reader = new Scanner(filereader);
 			while (reader.hasNextLine()) {
 				String temp = reader.nextLine();
-				// System.out.println(temp);
+				System.out.println(temp);
 				String tempArray[] = temp.split("\t");
 				Item i = new Item(
 						tempArray[0],

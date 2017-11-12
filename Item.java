@@ -13,7 +13,12 @@ public class Item {
 		this.generation = Integer.parseInt(generation);
 		this.name = name;
 		this.desc = desc;
-		this.pInc = Double.parseDouble(pInc);
+		try {
+			this.pInc = Double.parseDouble(pInc);
+		} catch (Exception e) {
+			this.pInc = 1.0D;
+			e.printStackTrace();
+		}
 	}
 
 	public Item(int id, double price, int generation, String name, String desc, double pInc) {
