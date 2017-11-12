@@ -1,2 +1,2 @@
 # corporateSlav
-for filthy gopnik
+for silly slavs with fiscal interests
