@@ -1,3 +1,4 @@
+package corporateSlav;
 public class Payment extends Thread {
 
 	public Payment(String name) {
