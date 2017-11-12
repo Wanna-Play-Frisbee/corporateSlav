@@ -4,6 +4,8 @@ public class Player {
 
 	int balance = 0;
 	String name = "Player";
+	double squatConstant = 1.0D;
+	
 	ArrayList<Item> playerInv = new ArrayList<Item>();
 
 	public Player(String newName) {
@@ -18,4 +20,7 @@ public class Player {
 		playerInv.remove(playerInv.indexOf(i));
 	}
 
+	public void squatMod(double squatNew) {
+		this.squatConstant = squatNew;
+	}
 }

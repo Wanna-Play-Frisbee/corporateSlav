@@ -6,14 +6,14 @@ public class Payment extends Thread {
 
 	@Override
 	public void run() {
-		System.out.println("MyThread - START " + Thread.currentThread().getName());
+		System.out.println("START " + Thread.currentThread().getName());
 		try {
 			Thread.sleep(2000);
 			doProcessing();
 		} catch (InterruptedException e) {
 			e.printStackTrace();
 		}
-		System.out.println("MyThread - END " + Thread.currentThread().getName());
+		System.out.println("END   " + Thread.currentThread().getName());
 	}
 
 	private void doProcessing() throws InterruptedException {
