@@ -1,3 +1,4 @@
+package corporateSlav;
 public class Item {
 
 	int id;
