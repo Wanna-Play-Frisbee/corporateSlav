@@ -5,6 +5,7 @@ public class Player {
 	int balance = 0;
 	String name = "Player";
 	double squatConstant = 1.0D;
+	double squatSquad = 1.0D;
 	
 	ArrayList<Item> playerInv = new ArrayList<Item>();
 
@@ -21,6 +22,10 @@ public class Player {
 	}
 
 	public void squatMod(double squatNew) {
-		this.squatConstant = squatNew;
+		this.squatConstant += squatNew;
+	}
+	
+	public void squatSquadMod(double squadMod) {
+		this.squatSquad += squadMod;
 	}
 }
