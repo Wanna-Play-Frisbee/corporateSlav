@@ -1,4 +1,4 @@
-import java.util.*;
+import java.util.ArrayList;
 
 public class Player {
 
@@ -6,12 +6,12 @@ public class Player {
 	String name = "Player";
 	double squatConstant = 1.0D;
 	double squatSquad = 1.0D;
-	
+
 	ArrayList<Item> playerInv = new ArrayList<Item>();
 
 	public Player(String newName) {
 		this.name = newName;
-		Tycoon.out("Welcome, "+this.name);
+		Tycoon.out("Welcome, " + this.name);
 	}
 
 	public void invAdd(Item i) {
@@ -25,7 +25,7 @@ public class Player {
 	public void squatMod(double squatNew) {
 		this.squatConstant += squatNew;
 	}
-	
+
 	public void squatSquadMod(double squadMod) {
 		this.squatSquad += squadMod;
 	}

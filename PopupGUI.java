@@ -11,7 +11,7 @@ public class PopupGUI {
 		frame.setTitle("Slav Says");
 		JOptionPane.showMessageDialog(frame, message);
 	}
-	
+
 	public static String QuestionGUI(String message) {
 		return JOptionPane.showInputDialog(message);
 	}

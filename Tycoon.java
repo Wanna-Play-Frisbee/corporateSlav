@@ -5,6 +5,7 @@ public class Tycoon {
 
 	public static ArrayList<Player> players = new ArrayList<Player>();
 	static Player you;
+
 	public static void main(String[] args) {
 		JGUI.init();
 		you = new Player(PopupGUI.QuestionGUI("What is your name?"));
@@ -19,8 +20,10 @@ public class Tycoon {
 		System.out.println(s);
 		try {
 			new PopupGUI(s);
-		} catch (HeadlessException e) {} //Eat errors silently
+		} catch (HeadlessException e) {
+		} // Eat errors silently
 	}
+
 	public static void command(String s) {
 		String command[] = s.split(",/ /");
 	}
