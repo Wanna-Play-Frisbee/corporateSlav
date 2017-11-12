@@ -1,3 +1,4 @@
+package corporateSlav;
 import java.util.ArrayList;
 
 public class Tycoon {
