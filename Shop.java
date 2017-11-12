@@ -17,7 +17,7 @@ public class Shop {
 			reader = new Scanner(filereader, "UTF-8");
 			while (reader.hasNextLine()) {
 				String temp = reader.nextLine();
-				Tycoon.out(temp);
+				//System.out.println(temp);
 				String tempArray[] = temp.split("\t");
 				Item i = new Item(
 				 tempArray[0],

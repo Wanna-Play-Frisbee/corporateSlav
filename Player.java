@@ -11,6 +11,7 @@ public class Player {
 
 	public Player(String newName) {
 		this.name = newName;
+		Tycoon.out("Welcome, "+this.name);
 	}
 
 	public void invAdd(Item i) {

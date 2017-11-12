@@ -3,6 +3,8 @@ import javax.swing.JFrame;
 import javax.swing.JScrollBar;
 import java.awt.BorderLayout;
 import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+
 import java.awt.Font;
 import javax.swing.SwingConstants;
 import javax.swing.JTextField;
@@ -15,25 +17,25 @@ import java.awt.event.MouseEvent;
 
 public class JGUI {
 
-	private JFrame frame;
+	private static JFrame frame;
 	private JTextField textField;
 
-	/**
-	 * Launch the application.
-	 */
-	public static void main() {
-		EventQueue.invokeLater(new Runnable() {
-			public void run() {
-				try {
-					JGUI window = new JGUI();
-					window.frame.setVisible(true);
-				} catch (Exception e) {
-					e.printStackTrace();
-				}
-			}
-		});
+	static JGUI window;
+	
+	public static void init() {
+		try {
+			window = new JGUI();
+			frame.setTitle("Corporate Slav");
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
 	}
 
+
+	public static void show() {
+		window.frame.setVisible(true);
+	}
+	
 	/**
 	 * Create the application.
 	 */
