@@ -10,6 +10,7 @@ public class Tycoon {
 		players.add(you);
 		Thread payments = new Payment("Payment Thread");
 		payments.start();
+		JGUI.main();
 	}
 
 	public static void out(String s) {
